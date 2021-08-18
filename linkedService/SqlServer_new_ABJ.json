@@ -1,0 +1,17 @@
+{
+	"name": "SqlServer_new_ABJ",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Abuja Alone Runtime",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=172.25.4.50;initial catalog=dynamed_new;user id=kayodek",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjN2U5ZjNhZi1lMGM5LTQ5YzYtODA0OS0wNDEzNGVjNzM1NTIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeABJ",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,680 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "data_a07a1d5e-315e-4074-97cf-d5cd98df370f_a8ef2e3f-9ace-4aa3-853f-72fd845f3725.json",
+				"container": "bdcabjfolder"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"contacts": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "integer"
+							},
+							"first_name": {
+								"type": "string"
+							},
+							"last_name": {
+								"type": "string"
+							},
+							"display_name": {
+								"type": "string"
+							},
+							"avatar": {
+								"type": "null"
+							},
+							"job_title": {
+								"type": "string"
+							},
+							"city": {
+								"type": "string"
+							},
+							"state": {
+								"type": "string"
+							},
+							"zipcode": {
+								"type": "string"
+							},
+							"country": {
+								"type": "string"
+							},
+							"email": {
+								"type": "string"
+							},
+							"emails": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "integer"
+										},
+										"value": {
+											"type": "string"
+										},
+										"is_primary": {
+											"type": "boolean"
+										},
+										"label": {
+											"type": "null"
+										},
+										"_destroy": {
+											"type": "boolean"
+										}
+									}
+								}
+							},
+							"time_zone": {
+								"type": "string"
+							},
+							"work_number": {
+								"type": "string"
+							},
+							"mobile_number": {
+								"type": "string"
+							},
+							"address": {
+								"type": "string"
+							},
+							"last_seen": {
+								"type": "string"
+							},
+							"lead_score": {
+								"type": "integer"
+							},
+							"last_contacted": {
+								"type": "string"
+							},
+							"open_deals_amount": {
+								"type": "string"
+							},
+							"won_deals_amount": {
+								"type": "string"
+							},
+							"links": {
+								"type": "object",
+								"properties": {
+									"conversations": {
+										"type": "string"
+									},
+									"timeline_feeds": {
+										"type": "string"
+									},
+									"document_associations": {
+										"type": "string"
+									},
+									"notes": {
+										"type": "string"
+									},
+									"tasks": {
+										"type": "string"
+									},
+									"reminders": {
+										"type": "string"
+									},
+									"appointments": {
+										"type": "string"
+									},
+									"duplicates": {
+										"type": "string"
+									},
+									"connections": {
+										"type": "string"
+									}
+								}
+							},
+							"last_contacted_sales_activity_mode": {
+								"type": "null"
+							},
+							"custom_field": {
+								"type": "object",
+								"properties": {
+									"cf_preferred_clinic": {
+										"type": "null"
+									},
+									"cf_relationship_status": {
+										"type": "null"
+									},
+									"cf_birthday": {
+										"type": "null"
+									},
+									"cf_service": {
+										"type": "null"
+									},
+									"cf_pipeline_name": {
+										"type": "null"
+									},
+									"cf_nationality": {
+										"type": "null"
+									},
+									"cf_work_address": {
+										"type": "null"
+									},
+									"cf_shipping_city": {
+										"type": "null"
+									},
+									"cf_shipping_state": {
+										"type": "null"
+									},
+									"cf_shipping_country": {
+										"type": "null"
+									},
+									"cf_optional_city": {
+										"type": "null"
+									},
+									"cf_optional_state": {
+										"type": "null"
+									},
+									"cf_optional_country": {
+										"type": "null"
+									},
+									"cf_spouse_name": {
+										"type": "null"
+									},
+									"cf_appointment_for": {
+										"type": "null"
+									},
+									"cf_preferred_time": {
+										"type": "null"
+									},
+									"cf_how_did_you_hear_about_tbc": {
+										"type": "null"
+									},
+									"cf_referred_by": {
+										"type": "null"
+									},
+									"cf_enquiry_information": {
+										"type": "null"
+									},
+									"cf_gender_is": {
+										"type": "null"
+									},
+									"cf_client_religion": {
+										"type": "null"
+									},
+									"cf_place_of_birth": {
+										"type": "null"
+									},
+									"cf_speciality": {
+										"type": "null"
+									},
+									"cf_lead_source_api": {
+										"type": "null"
+									},
+									"cf_middle_name": {
+										"type": "null"
+									},
+									"cf_phone_1_ext": {
+										"type": "null"
+									},
+									"cf_id_infusionsoft": {
+										"type": "null"
+									},
+									"cf_name_is": {
+										"type": "null"
+									},
+									"cf_score_value": {
+										"type": "null"
+									},
+									"cf_tag_ids_is": {
+										"type": "null"
+									},
+									"cf_person_type": {
+										"type": "null"
+									},
+									"cf_title": {
+										"type": "null"
+									},
+									"cf_created_by_is": {
+										"type": "null"
+									},
+									"cf_owner_is": {
+										"type": "null"
+									},
+									"cf_lead_source_category": {
+										"type": "null"
+									},
+									"cf_gdpr_request": {
+										"type": "null"
+									},
+									"cf_newsletter_confirmation": {
+										"type": "null"
+									},
+									"cf_lead_origin": {
+										"type": "null"
+									},
+									"cf_lead_message_comments": {
+										"type": "null"
+									},
+									"cf_specialty_area_of_medicine": {
+										"type": "null"
+									},
+									"cf_last_updated_is": {
+										"type": "null"
+									},
+									"cf_preferred_date_is": {
+										"type": "null"
+									},
+									"cf_created_date_and_time_is": {
+										"type": "null"
+									},
+									"cf_facebook_test": {
+										"type": "boolean"
+									},
+									"cf_website_test": {
+										"type": "boolean"
+									},
+									"cf_fax": {
+										"type": "null"
+									}
+								}
+							},
+							"created_at": {
+								"type": "string"
+							},
+							"updated_at": {
+								"type": "string"
+							},
+							"keyword": {
+								"type": "string"
+							},
+							"medium": {
+								"type": "string"
+							},
+							"last_contacted_mode": {
+								"type": "string"
+							},
+							"recent_note": {
+								"type": "string"
+							},
+							"won_deals_count": {
+								"type": "integer"
+							},
+							"last_contacted_via_sales_activity": {
+								"type": "null"
+							},
+							"completed_sales_sequences": {
+								"type": "null"
+							},
+							"active_sales_sequences": {
+								"type": "null"
+							},
+							"web_form_ids": {
+								"type": "null"
+							},
+							"open_deals_count": {
+								"type": "integer"
+							},
+							"last_assigned_at": {
+								"type": "string"
+							},
+							"tags": {
+								"type": "array"
+							},
+							"facebook": {
+								"type": "string"
+							},
+							"twitter": {
+								"type": "string"
+							},
+							"linkedin": {
+								"type": "null"
+							},
+							"is_deleted": {
+								"type": "boolean"
+							},
+							"team_user_ids": {
+								"type": "null"
+							},
+							"subscription_status": {
+								"type": "integer"
+							},
+							"customer_fit": {
+								"type": "integer"
+							},
+							"phone_numbers": {
+								"type": "array"
+							}
+						}
+					}
+				},
+				"meta": {
+					"type": "object",
+					"properties": {
+						"total_pages": {
+							"type": "integer"
+						},
+						"total": {
+							"type": "integer"
+						},
+						"avatar_data": {
+							"type": "object",
+							"properties": {
+								"Contact": {
+									"type": "object",
+									"properties": {
+										"15000383401": {
+											"type": "null"
+										},
+										"15000890389": {
+											"type": "string"
+										},
+										"15001212292": {
+											"type": "string"
+										},
+										"15001135585": {
+											"type": "string"
+										},
+										"15000853590": {
+											"type": "null"
+										},
+										"15000873220": {
+											"type": "null"
+										},
+										"15000859304": {
+											"type": "null"
+										},
+										"15000868340": {
+											"type": "null"
+										},
+										"15000851973": {
+											"type": "null"
+										},
+										"15000844735": {
+											"type": "null"
+										},
+										"15000851405": {
+											"type": "null"
+										},
+										"15000851428": {
+											"type": "null"
+										},
+										"15000851976": {
+											"type": "null"
+										},
+										"15000852968": {
+											"type": "null"
+										},
+										"15000853108": {
+											"type": "null"
+										},
+										"15000853463": {
+											"type": "null"
+										},
+										"15000853536": {
+											"type": "null"
+										},
+										"15000853877": {
+											"type": "null"
+										},
+										"15000853939": {
+											"type": "null"
+										},
+										"15000854070": {
+											"type": "null"
+										},
+										"15000854081": {
+											"type": "null"
+										},
+										"15000854333": {
+											"type": "null"
+										},
+										"15000854760": {
+											"type": "null"
+										},
+										"15000855384": {
+											"type": "null"
+										},
+										"15000855410": {
+											"type": "null"
+										},
+										"15000856347": {
+											"type": "null"
+										},
+										"15000857139": {
+											"type": "null"
+										},
+										"15000857477": {
+											"type": "null"
+										},
+										"15000858204": {
+											"type": "null"
+										},
+										"15000864256": {
+											"type": "null"
+										},
+										"15000851250": {
+											"type": "string"
+										},
+										"15000851315": {
+											"type": "null"
+										},
+										"15000851415": {
+											"type": "string"
+										},
+										"15000851562": {
+											"type": "string"
+										},
+										"15000851598": {
+											"type": "null"
+										},
+										"15000852606": {
+											"type": "string"
+										},
+										"15000853127": {
+											"type": "string"
+										},
+										"15000853146": {
+											"type": "string"
+										},
+										"15000853305": {
+											"type": "null"
+										},
+										"15000853520": {
+											"type": "null"
+										},
+										"15000853729": {
+											"type": "string"
+										},
+										"15000853862": {
+											"type": "string"
+										},
+										"15000853925": {
+											"type": "null"
+										},
+										"15000854157": {
+											"type": "string"
+										},
+										"15000856122": {
+											"type": "string"
+										},
+										"15000856165": {
+											"type": "string"
+										},
+										"15000856313": {
+											"type": "string"
+										},
+										"15000856322": {
+											"type": "string"
+										},
+										"15000856725": {
+											"type": "null"
+										},
+										"15000856790": {
+											"type": "string"
+										},
+										"15000857116": {
+											"type": "string"
+										},
+										"15000857722": {
+											"type": "null"
+										},
+										"15000864590": {
+											"type": "string"
+										},
+										"15000865958": {
+											"type": "null"
+										},
+										"15000873944": {
+											"type": "null"
+										},
+										"15000874087": {
+											"type": "null"
+										},
+										"15000874544": {
+											"type": "null"
+										},
+										"15000878654": {
+											"type": "null"
+										},
+										"15000882733": {
+											"type": "null"
+										},
+										"15000882844": {
+											"type": "null"
+										},
+										"15000884820": {
+											"type": "null"
+										},
+										"15000849541": {
+											"type": "null"
+										},
+										"15000851095": {
+											"type": "null"
+										},
+										"15000851163": {
+											"type": "null"
+										},
+										"15000851178": {
+											"type": "null"
+										},
+										"15000851212": {
+											"type": "null"
+										},
+										"15000851213": {
+											"type": "null"
+										},
+										"15000851222": {
+											"type": "null"
+										},
+										"15000851230": {
+											"type": "null"
+										},
+										"15000851234": {
+											"type": "null"
+										},
+										"15000851244": {
+											"type": "null"
+										},
+										"15000851246": {
+											"type": "null"
+										},
+										"15000851254": {
+											"type": "null"
+										},
+										"15000851255": {
+											"type": "null"
+										},
+										"15000851260": {
+											"type": "null"
+										},
+										"15000851266": {
+											"type": "null"
+										},
+										"15000851272": {
+											"type": "null"
+										},
+										"15000851273": {
+											"type": "null"
+										},
+										"15000851276": {
+											"type": "null"
+										},
+										"15000851278": {
+											"type": "null"
+										},
+										"15000851280": {
+											"type": "null"
+										},
+										"15000851282": {
+											"type": "null"
+										},
+										"15000851285": {
+											"type": "null"
+										},
+										"15000851288": {
+											"type": "null"
+										},
+										"15000851291": {
+											"type": "null"
+										},
+										"15000851297": {
+											"type": "null"
+										},
+										"15000851299": {
+											"type": "null"
+										},
+										"15000851300": {
+											"type": "null"
+										},
+										"15000851302": {
+											"type": "null"
+										},
+										"15000851307": {
+											"type": "null"
+										},
+										"15000851311": {
+											"type": "null"
+										},
+										"15000851316": {
+											"type": "null"
+										},
+										"15000851319": {
+											"type": "null"
+										},
+										"15000851323": {
+											"type": "null"
+										},
+										"15000851333": {
+											"type": "null"
+										},
+										"15000851352": {
+											"type": "null"
+										},
+										"15000851365": {
+											"type": "null"
+										},
+										"15000851371": {
+											"type": "null"
+										},
+										"15000851373": {
+											"type": "null"
+										},
+										"15000851374": {
+											"type": "null"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

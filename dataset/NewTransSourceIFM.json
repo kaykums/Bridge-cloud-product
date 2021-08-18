@@ -1,0 +1,261 @@
+{
+	"name": "NewTransSourceIFM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "NewTranIFMLinked",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "accentuation_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "all_day",
+				"type": "bit"
+			},
+			{
+				"name": "appointment_type_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "arrived",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "category_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "ciid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "confirmed",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "confirmed_user_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "created",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "creator_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "deleted",
+				"type": "bit"
+			},
+			{
+				"name": "deleted_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "deleted_user_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "description",
+				"type": "nvarchar"
+			},
+			{
+				"name": "end_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "exclusive",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "external",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "hl7_case_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "journal_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "label",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "left_clinic",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "left_reception",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "location",
+				"type": "nvarchar"
+			},
+			{
+				"name": "m_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "modified",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "modifier_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "object_type_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "patient_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "prefix",
+				"type": "nvarchar"
+			},
+			{
+				"name": "procedure",
+				"type": "nvarchar"
+			},
+			{
+				"name": "readonly",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "recurrence_info",
+				"type": "nvarchar"
+			},
+			{
+				"name": "reference_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "reference_type_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "reminder_info",
+				"type": "nvarchar"
+			},
+			{
+				"name": "resource_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "room_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "rowversion",
+				"type": "timestamp"
+			},
+			{
+				"name": "sms",
+				"type": "bit"
+			},
+			{
+				"name": "start_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "state",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "status",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "subject",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tentative",
+				"type": "bit"
+			},
+			{
+				"name": "type",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "created_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deleted_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "guid_changed_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "modified_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "refuse_recurring_appointment",
+				"type": "bit"
+			},
+			{
+				"name": "remove_reason_custom_text",
+				"type": "nvarchar"
+			},
+			{
+				"name": "remove_reason_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "remove_reason_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "remove_reason_user_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "service_appointment",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "appointment"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

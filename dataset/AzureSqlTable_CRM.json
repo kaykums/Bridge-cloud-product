@@ -1,0 +1,389 @@
+{
+	"name": "AzureSqlTable_CRM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_CRM",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "First Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Last Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Spouse Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Birthday",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Company Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Company Id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone 1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Mobile Phone",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Phone 1_1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Phone 1 Ext",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Phone 1 Type",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Phone 2",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Phone 2_2",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Phone 2 Ext",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Phone 2 Type",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email Address 2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Fax 1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fax 1_4",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Street Address 1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "State",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City (Shipping)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "State (Shipping)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country (Shipping)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Score Value",
+				"type": "bit"
+			},
+			{
+				"name": "Facebook",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City (Optional)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "State (Optional)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country (Optional)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Tag Ids",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Tags",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Person Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job Title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Website",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Middle Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Nickname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Suffix",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Anniversary",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Created By",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Date Created",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Last Updated",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "OwnerID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Notes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Language",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Owner",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Lead Source",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Lead Source Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GDPR Request",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Appointment / For",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Preferred Clinic",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Preferred Time",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Preferred Date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "How did you hear about TBC?",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Referred By",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Appointment Request Date Created",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Newsletter Confirmation",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Created Date and Time",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Lead Origin",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Enquiry Information",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Gender",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Full Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "First Name_11",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Last Name_12",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Lead Message (Comments)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Full Name_13",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Speciality",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Client Religion",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Date of Birth",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Place of Birth",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Nationality",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact Home Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Work Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City_15",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Specialty: Area of Medicine",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Relationship Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Confirm Email Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Preferred Date & Time",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Confirm Appointment Date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Confirm Email Address_16",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Lead Score",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Lastname_Firstname_Email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Lastname_Firstname",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CRM_Contacts"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

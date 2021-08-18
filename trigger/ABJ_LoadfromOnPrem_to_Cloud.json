@@ -1,0 +1,17 @@
+{
+	"name": "ABJ_LoadfromOnPrem_to_Cloud",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2021-04-23T18:00:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

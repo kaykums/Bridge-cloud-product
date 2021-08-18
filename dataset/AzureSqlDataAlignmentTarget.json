@@ -1,0 +1,149 @@
+{
+	"name": "AzureSqlDataAlignmentTarget",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TargetLinked_AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "table_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "From",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Until",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Schedule List",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Subject",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Lead Source",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Lead Source Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Patient Number",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Patient",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Process",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Room",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "With Reservations",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Comment(s)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "E-Mail",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Date of Birth",
+				"type": "date"
+			},
+			{
+				"name": "Street",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Location",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ZIP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Created by",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Created on",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Modified by",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Modified on",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Location_1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "To",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Resource",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Manual_Upload"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

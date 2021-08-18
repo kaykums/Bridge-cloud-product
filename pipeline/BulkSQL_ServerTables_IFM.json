@@ -1,0 +1,615 @@
+{
+	"name": "BulkSQL_ServerTables_IFM",
+	"properties": {
+		"activities": [
+			{
+				"name": "IterateSQLServerTables",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.TableList",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "CopyPH",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "SqlServerSource",
+									"sqlReaderQuery": {
+										"value": "SELECT * FROM [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]",
+										"type": "Expression"
+									},
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
+								"sink": {
+									"type": "AzureSqlSink",
+									"preCopyScript": {
+										"value": "TRUNCATE TABLE\n[@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]",
+										"type": "Expression"
+									},
+									"disableMetricsCollection": false
+								},
+								"enableStaging": true,
+								"stagingSettings": {
+									"linkedServiceName": {
+										"referenceName": "AzureBlobStorage_LAG",
+										"type": "LinkedServiceReference"
+									},
+									"path": "bdcifmfolder"
+								},
+								"translator": {
+									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"source": {
+												"name": "accentuation_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "accentuation_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "all_day",
+												"type": "Boolean",
+												"physicalType": "bit"
+											},
+											"sink": {
+												"name": "all_day",
+												"type": "Boolean",
+												"physicalType": "bit"
+											}
+										},
+										{
+											"source": {
+												"name": "appointment_type_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "appointment_type_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "arrived",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "arrived",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "category_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "category_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "ciid",
+												"type": "Int32",
+												"physicalType": "int"
+											},
+											"sink": {
+												"name": "ciid",
+												"type": "Int32",
+												"physicalType": "int"
+											}
+										},
+										{
+											"source": {
+												"name": "confirmed",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "confirmed",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "confirmed_user_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "confirmed_user_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "created",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "created",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "creator_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "creator_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "deleted",
+												"type": "Boolean",
+												"physicalType": "bit"
+											},
+											"sink": {
+												"name": "deleted",
+												"type": "Boolean",
+												"physicalType": "bit"
+											}
+										},
+										{
+											"source": {
+												"name": "deleted_date",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "deleted_date",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "deleted_user_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "deleted_user_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "description",
+												"type": "String",
+												"physicalType": "nvarchar"
+											},
+											"sink": {
+												"name": "description",
+												"type": "String",
+												"physicalType": "nvarchar"
+											}
+										},
+										{
+											"source": {
+												"name": "end_date",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "end_date",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "hl7_case_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "hl7_case_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "journal_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "journal_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "label",
+												"type": "Int32",
+												"physicalType": "int"
+											},
+											"sink": {
+												"name": "label",
+												"type": "Int32",
+												"physicalType": "int"
+											}
+										},
+										{
+											"source": {
+												"name": "left_clinic",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "left_clinic",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "left_reception",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "left_reception",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "location",
+												"type": "String",
+												"physicalType": "nvarchar"
+											},
+											"sink": {
+												"name": "location",
+												"type": "String",
+												"physicalType": "nvarchar"
+											}
+										},
+										{
+											"source": {
+												"name": "m_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "m_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "modified",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "modified",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "modifier_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "modifier_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "object_type_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "object_type_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "patient_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "patient_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "prefix",
+												"type": "String",
+												"physicalType": "nvarchar"
+											},
+											"sink": {
+												"name": "prefix",
+												"type": "String",
+												"physicalType": "nvarchar"
+											}
+										},
+										{
+											"source": {
+												"name": "procedure",
+												"type": "String",
+												"physicalType": "nvarchar"
+											},
+											"sink": {
+												"name": "procedure",
+												"type": "String",
+												"physicalType": "nvarchar"
+											}
+										},
+										{
+											"source": {
+												"name": "recurrence_info",
+												"type": "String",
+												"physicalType": "nvarchar"
+											},
+											"sink": {
+												"name": "recurrence_info",
+												"type": "String",
+												"physicalType": "nvarchar"
+											}
+										},
+										{
+											"source": {
+												"name": "reference_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "reference_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "reference_type_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "reference_type_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "reminder_info",
+												"type": "String",
+												"physicalType": "nvarchar"
+											},
+											"sink": {
+												"name": "reminder_info",
+												"type": "String",
+												"physicalType": "nvarchar"
+											}
+										},
+										{
+											"source": {
+												"name": "resource_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "resource_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "room_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											},
+											"sink": {
+												"name": "room_guid",
+												"type": "Guid",
+												"physicalType": "uniqueidentifier"
+											}
+										},
+										{
+											"source": {
+												"name": "rowversion",
+												"physicalType": "timestamp"
+											},
+											"sink": {
+												"name": "rowversion",
+												"physicalType": "timestamp"
+											}
+										},
+										{
+											"source": {
+												"name": "sms",
+												"type": "Boolean",
+												"physicalType": "bit"
+											},
+											"sink": {
+												"name": "sms",
+												"type": "Boolean",
+												"physicalType": "bit"
+											}
+										},
+										{
+											"source": {
+												"name": "start_date",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											},
+											"sink": {
+												"name": "start_date",
+												"type": "DateTime",
+												"physicalType": "datetime2"
+											}
+										},
+										{
+											"source": {
+												"name": "state",
+												"type": "Int32",
+												"physicalType": "int"
+											},
+											"sink": {
+												"name": "state",
+												"type": "Int32",
+												"physicalType": "int"
+											}
+										},
+										{
+											"source": {
+												"name": "status",
+												"type": "Int32",
+												"physicalType": "int"
+											},
+											"sink": {
+												"name": "status",
+												"type": "Int32",
+												"physicalType": "int"
+											}
+										},
+										{
+											"source": {
+												"name": "subject",
+												"type": "String",
+												"physicalType": "nvarchar"
+											},
+											"sink": {
+												"name": "subject",
+												"type": "String",
+												"physicalType": "nvarchar"
+											}
+										},
+										{
+											"source": {
+												"name": "tentative",
+												"type": "Boolean",
+												"physicalType": "bit"
+											},
+											"sink": {
+												"name": "tentative",
+												"type": "Boolean",
+												"physicalType": "bit"
+											}
+										},
+										{
+											"source": {
+												"name": "type",
+												"type": "Int32",
+												"physicalType": "int"
+											},
+											"sink": {
+												"name": "type",
+												"type": "Int32",
+												"physicalType": "int"
+											}
+										}
+									],
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "SqlServerTable_Abj",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "AzureSqlDatasetIFM",
+									"type": "DatasetReference",
+									"parameters": {
+										"DWTableName": {
+											"value": "@item().TABLE_NAME",
+											"type": "Expression"
+										},
+										"DWSchemaName": {
+											"value": "@item().TABLE_SCHEMA",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"TableList": {
+				"type": "array"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-02-15T15:58:45Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

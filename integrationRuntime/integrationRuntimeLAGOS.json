@@ -1,0 +1,7 @@
+{
+	"name": "integrationRuntimeLAGOS",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "Lagos Alone"
+	}
+}

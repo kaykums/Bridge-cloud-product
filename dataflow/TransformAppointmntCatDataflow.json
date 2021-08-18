@@ -1,0 +1,58 @@
+{
+	"name": "TransformAppointmntCatDataflow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "TransSourceLag_App",
+						"type": "DatasetReference"
+					},
+					"name": "sourceLAG"
+				},
+				{
+					"dataset": {
+						"referenceName": "TransSourceABJ_App",
+						"type": "DatasetReference"
+					},
+					"name": "sourceABJ"
+				},
+				{
+					"dataset": {
+						"referenceName": "TransSourcePH_App",
+						"type": "DatasetReference"
+					},
+					"name": "sourcePH"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "TransformationDatasetTargetAppoinment",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "CreateLocation"
+				},
+				{
+					"name": "DerivedColumn1"
+				},
+				{
+					"name": "DerivedColumn2"
+				},
+				{
+					"name": "Union1"
+				},
+				{
+					"name": "Select1"
+				}
+			],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tquery: 'SELECT\\n\\n     \\n      [active]\\n      ,[back_color]\\n      ,[ciid]\\n      ,[created]\\n      ,[created_computer_name]\\n      ,[creator_guid]\\n      ,[deleted]\\n      ,[deleted_computer_name]\\n      ,[deleted_date]\\n      ,[deleted_user_guid]\\n      ,[fore_color]\\n      ,[guid]\\n      ,[guid_changed_date]\\n      ,[m_guid]\\n      ,[modified]\\n      ,[modified_computer_name]\\n      ,[modifier_guid]\\n      ,[name]\\n      \\n  FROM [dbo].[dm_appointment_category]\\n\\n\\n\\n\\n\\n   ',\n\tformat: 'query') ~> sourceLAG\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tquery: ' SELECT\\n\\n     \\n      [active]\\n      ,[back_color]\\n      ,[ciid]\\n      ,[created]\\n      ,[created_computer_name]\\n      ,[creator_guid]\\n      ,[deleted]\\n      ,[deleted_computer_name]\\n      ,[deleted_date]\\n      ,[deleted_user_guid]\\n      ,[fore_color]\\n      ,[guid]\\n      ,[guid_changed_date]\\n      ,[m_guid]\\n      ,[modified]\\n      ,[modified_computer_name]\\n      ,[modifier_guid]\\n      ,[name]\\n      \\n  FROM [dbo].[dm_appointment_category]',\n\tformat: 'query') ~> sourceABJ\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tquery: ' SELECT\\n\\n   \\n      [active]\\n      ,[back_color]\\n      ,[ciid]\\n      ,[created]\\n      ,[created_computer_name]\\n      ,[creator_guid]\\n      ,[deleted]\\n      ,[deleted_computer_name]\\n      ,[deleted_date]\\n      ,[deleted_user_guid]\\n      ,[fore_color]\\n      ,[guid]\\n      ,[guid_changed_date]\\n      ,[m_guid]\\n      ,[modified]\\n      ,[modified_computer_name]\\n      ,[modifier_guid]\\n      ,[name]\\n      \\n  FROM [dbo].[dm_appointment_category]',\n\tformat: 'query') ~> sourcePH\nsourceLAG derive(fertility_location = abs(1)) ~> CreateLocation\nsourceABJ derive(fertility_location = abs(2)) ~> DerivedColumn1\nsourcePH derive(fertility_location = abs(3)) ~> DerivedColumn2\nCreateLocation, DerivedColumn1, DerivedColumn2 union(byName: true)~> Union1\nUnion1 select(skipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1\nSelect1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\tguid as string,\n\t\tm_guid as string,\n\t\tcreator_guid as string,\n\t\tcreated as timestamp,\n\t\tmodifier_guid as string,\n\t\tmodified as timestamp,\n\t\tdeleted as boolean,\n\t\trowversion as binary,\n\t\tciid as integer,\n\t\tpatient_nr as string,\n\t\ttitle as string,\n\t\tfamilyname as string,\n\t\tfirstname as string,\n\t\tfirstnames2 as string,\n\t\tnameaffix as string,\n\t\tbirthname as string,\n\t\thousename as string,\n\t\tdefault_address as string,\n\t\tstreet_private as string,\n\t\tregion_private as string,\n\t\tzip_private as string,\n\t\ttown_private as string,\n\t\tstreet_business as string,\n\t\tregion_business as string,\n\t\tzip_business as string,\n\t\ttown_business as string,\n\t\tstreet_other as string,\n\t\tregion_other as string,\n\t\tzip_other as string,\n\t\ttown_other as string,\n\t\ttel_mobile as string,\n\t\ttel_business as string,\n\t\ttel_business2 as string,\n\t\ttel_private as string,\n\t\ttel_other as string,\n\t\tfax_business as string,\n\t\tfax_private as string,\n\t\temail_business as string,\n\t\temail_private as string,\n\t\twww_business as string,\n\t\twww_private as string,\n\t\tjobtitle as string,\n\t\tbirthdate as timestamp,\n\t\tassurance_nr as string,\n\t\tmember_nr as string,\n\t\tassurance_category as integer,\n\t\trecipe_charge_free as integer,\n\t\trecipe_charge_free_to as timestamp,\n\t\tletter_salutation as string,\n\t\tletter_greeting as string,\n\t\tassurance_extra as string,\n\t\tbank_name as string,\n\t\tbank_account_nr as string,\n\t\tbank_nr as string,\n\t\tbank_iban as string,\n\t\tbank_swift as string,\n\t\tewr_nr as string,\n\t\tewr_ass_nr as string,\n\t\textra_assurance_ambulant as boolean,\n\t\textra_assurance_stationary as boolean,\n\t\tmemo as string,\n\t\tdwa_guid as string,\n\t\tpartner_guid as string,\n\t\temployer_guid as string,\n\t\tassured_by_guid as string,\n\t\tewr_expiry_date as timestamp,\n\t\tforeign_import_id as string,\n\t\treligion as string,\n\t\tdonor as boolean,\n\t\tdonor_id as string,\n\t\tdonor_medical_history_guid as string,\n\t\taccount_no_financial_accounting as string,\n\t\tcountry_private_guid as string,\n\t\tcountry_business_guid as string,\n\t\tcountry_other_guid as string,\n\t\tbirthplace_country_guid as string,\n\t\tnationality_guid as string,\n\t\tpatient_no_external as string,\n\t\ttax_number as string,\n\t\tbirthplace_region as string,\n\t\tbirthplace_zip as string,\n\t\tbirthplace_town as string,\n\t\tambulance_number as string,\n\t\tignore_on_export as integer,\n\t\thealth_insurance as string,\n\t\thealth_insurance_branch as string,\n\t\tsalutation_expression_guid as string,\n\t\tsalutation_guid as string,\n\t\tvoucher_discount as decimal(18,0),\n\t\tvoucher_discount_per_position as decimal(18,0),\n\t\tvoucher_due_days as integer,\n\t\tvoucher_assured_address as integer,\n\t\tgender_guid as string,\n\t\tcorrespondence_language_guid as string,\n\t\tinsurance_guid as string,\n\t\tfamily_status_guid as string,\n\t\tvoucher_period as integer,\n\t\tvoucher_currency_guid as string,\n\t\tinsured_by_relationship_guid as string,\n\t\toccupation_guid as string,\n\t\tinactive as boolean,\n\t\tlinked_patient_guid as string,\n\t\tdeleted_date as timestamp,\n\t\tdeleted_user_guid as string,\n\t\tassurance_category_guid as string,\n\t\tturn_off_reminders as boolean,\n\t\tstreet_invoice as string,\n\t\tregion_invoice as string,\n\t\tzip_invoice as string,\n\t\ttown_invoice as string,\n\t\tcountry_invoice_guid as string,\n\t\tcontact_guid as string,\n\t\tdo_not_send_sms as boolean,\n\t\tresponsible_person_title as string,\n\t\tresponsible_person_salutation_guid as string,\n\t\tresponsible_person_familyname as string,\n\t\tresponsible_person_firstname as string,\n\t\tresponsible_person_street as string,\n\t\tresponsible_person_region as string,\n\t\tresponsible_person_zip as string,\n\t\tresponsible_person_town as string,\n\t\tresponsible_person_country_guid as string,\n\t\tresponsible_person_tel_mobile as string,\n\t\tresponsible_person_email as string,\n\t\tresponsible_person_tel as string,\n\t\tresponsible_person_fax as string,\n\t\tresponsible_person_gender_guid as string,\n\t\tresponsible_person_birthdate as timestamp,\n\t\ttranslator_title as string,\n\t\ttranslator_salutation_guid as string,\n\t\ttranslator_familyname as string,\n\t\ttranslator_firstname as string,\n\t\ttranslator_street as string,\n\t\ttranslator_region as string,\n\t\ttranslator_zip as string,\n\t\ttranslator_town as string,\n\t\ttranslator_country_guid as string,\n\t\ttranslator_tel_mobile as string,\n\t\ttranslator_email as string,\n\t\ttranslator_tel as string,\n\t\ttranslator_fax as string,\n\t\ttranslator_gender_guid as string,\n\t\ttranslator_birthdate as timestamp,\n\t\tis_test as boolean,\n\t\tpostposed_title as string,\n\t\tresponsible_person_postposed_title as string,\n\t\ttranslator_postposed_title as string,\n\t\thome_visit as boolean,\n\t\tcreated_computer_name as string,\n\t\tmodified_computer_name as string,\n\t\tdeleted_computer_name as string,\n\t\tpatient_key_word as string,\n\t\treminder_lock as boolean,\n\t\treminder_lock_remarks as string,\n\t\treminder_lock_till_date as timestamp,\n\t\tdo_not_send_email as boolean,\n\t\tdunning_lock as boolean,\n\t\tdunning_lock_reason as string,\n\t\tguid_changed_date as timestamp,\n\t\taccounting_authority_export_rejected as boolean,\n\t\ttranslator_patient_guid as string,\n\t\tresponsible_person_patient_guid as string,\n\t\tresponsible_person_type_guid as string,\n\t\tdeactivation_remark as string,\n\t\tfertility_location as integer\n\t),\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\ttruncate:true,\n\tformat: 'table',\n\terrorHandlingOption: 'stopOnFirstError') ~> sink1"
+		}
+	}
+}

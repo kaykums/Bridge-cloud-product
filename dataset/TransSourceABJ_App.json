@@ -1,0 +1,101 @@
+{
+	"name": "TransSourceABJ_App",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TransformSourceLinkABJ",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "m_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "creator_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "created",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "modifier_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "modified",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "deleted_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "deleted_user_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "rowversion",
+				"type": "timestamp"
+			},
+			{
+				"name": "ciid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "back_color",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "deleted",
+				"type": "bit"
+			},
+			{
+				"name": "fore_color",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "active",
+				"type": "bit"
+			},
+			{
+				"name": "created_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "modified_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deleted_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "guid_changed_date",
+				"type": "datetime2",
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dm_appointment_category"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

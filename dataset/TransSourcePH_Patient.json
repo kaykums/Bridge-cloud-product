@@ -1,0 +1,101 @@
+{
+	"name": "TransSourcePH_Patient",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TransLinkPH",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "active",
+				"type": "bit"
+			},
+			{
+				"name": "back_color",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ciid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "created",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "created_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "creator_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "deleted",
+				"type": "bit"
+			},
+			{
+				"name": "deleted_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deleted_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "deleted_user_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "fore_color",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "guid_changed_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "m_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "modified",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "modified_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "modifier_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "rowversion",
+				"type": "timestamp"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "patient"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

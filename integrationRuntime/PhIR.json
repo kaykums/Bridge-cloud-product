@@ -1,0 +1,7 @@
+{
+	"name": "PhIR",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "New PH"
+	}
+}

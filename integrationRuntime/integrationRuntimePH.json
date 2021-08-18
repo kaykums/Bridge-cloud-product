@@ -1,0 +1,7 @@
+{
+	"name": "integrationRuntimePH",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "PH Alone"
+	}
+}

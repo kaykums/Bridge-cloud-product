@@ -1,0 +1,31 @@
+{
+	"name": "AzureSqlTableABJ",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseABJ",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SinkTableName": {
+				"type": "string"
+			},
+			"SinkSchemaName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "dataset().SinkSchemaName",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().SinkTableName",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

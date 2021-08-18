@@ -1,0 +1,363 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageExcel",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "InfusionSoftCRM.xlsx",
+				"container": "crminfusionsoft"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Id",
+				"type": "String"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "First Name",
+				"type": "String"
+			},
+			{
+				"name": "Last Name",
+				"type": "String"
+			},
+			{
+				"name": "Spouse Name",
+				"type": "String"
+			},
+			{
+				"name": "Birthday",
+				"type": "String"
+			},
+			{
+				"name": "Company Name",
+				"type": "String"
+			},
+			{
+				"name": "Phone 1",
+				"type": "String"
+			},
+			{
+				"name": "Mobile Phone",
+				"type": "String"
+			},
+			{
+				"name": "Phone 1_1",
+				"type": "String"
+			},
+			{
+				"name": "Phone 1 Ext",
+				"type": "String"
+			},
+			{
+				"name": "Phone 1 Type",
+				"type": "String"
+			},
+			{
+				"name": "Phone 2",
+				"type": "String"
+			},
+			{
+				"name": "Phone 2_2",
+				"type": "String"
+			},
+			{
+				"name": "Phone 2 Ext",
+				"type": "String"
+			},
+			{
+				"name": "Phone 2 Type",
+				"type": "String"
+			},
+			{
+				"name": "Email",
+				"type": "String"
+			},
+			{
+				"name": "Street Address 1",
+				"type": "String"
+			},
+			{
+				"name": "City",
+				"type": "String"
+			},
+			{
+				"name": "State",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "City (Shipping)",
+				"type": "String"
+			},
+			{
+				"name": "State (Shipping)",
+				"type": "String"
+			},
+			{
+				"name": "Country (Shipping)",
+				"type": "String"
+			},
+			{
+				"name": "Score Value",
+				"type": "String"
+			},
+			{
+				"name": "Facebook",
+				"type": "String"
+			},
+			{
+				"name": "City (Optional)",
+				"type": "String"
+			},
+			{
+				"name": "State (Optional)",
+				"type": "String"
+			},
+			{
+				"name": "Country (Optional)",
+				"type": "String"
+			},
+			{
+				"name": "Tag Ids",
+				"type": "String"
+			},
+			{
+				"name": "Tags",
+				"type": "String"
+			},
+			{
+				"name": "Person Type",
+				"type": "String"
+			},
+			{
+				"name": "Job Title",
+				"type": "String"
+			},
+			{
+				"name": "Website",
+				"type": "String"
+			},
+			{
+				"name": "Middle Name",
+				"type": "String"
+			},
+			{
+				"name": "Nickname",
+				"type": "String"
+			},
+			{
+				"name": "Title",
+				"type": "String"
+			},
+			{
+				"name": "Suffix",
+				"type": "String"
+			},
+			{
+				"name": "Anniversary",
+				"type": "String"
+			},
+			{
+				"name": "Created By",
+				"type": "String"
+			},
+			{
+				"name": "Date Created",
+				"type": "String"
+			},
+			{
+				"name": "Last Updated",
+				"type": "String"
+			},
+			{
+				"name": "OwnerID",
+				"type": "String"
+			},
+			{
+				"name": "Notes",
+				"type": "String"
+			},
+			{
+				"name": "Language",
+				"type": "String"
+			},
+			{
+				"name": "Time Zone",
+				"type": "String"
+			},
+			{
+				"name": "Owner",
+				"type": "String"
+			},
+			{
+				"name": "Lead Source",
+				"type": "String"
+			},
+			{
+				"name": "Lead Source Category",
+				"type": "String"
+			},
+			{
+				"name": "GDPR Request",
+				"type": "String"
+			},
+			{
+				"name": "Appointment / For",
+				"type": "String"
+			},
+			{
+				"name": "Preferred Clinic",
+				"type": "String"
+			},
+			{
+				"name": "Preferred Time",
+				"type": "String"
+			},
+			{
+				"name": "Preferred Date",
+				"type": "String"
+			},
+			{
+				"name": "How did you hear about TBC?",
+				"type": "String"
+			},
+			{
+				"name": "Referred By",
+				"type": "String"
+			},
+			{
+				"name": "Appointment Request Date Created",
+				"type": "String"
+			},
+			{
+				"name": "Newsletter Confirmation",
+				"type": "String"
+			},
+			{
+				"name": "Created Date and Time",
+				"type": "String"
+			},
+			{
+				"name": "Lead Origin",
+				"type": "String"
+			},
+			{
+				"name": "Enquiry Information",
+				"type": "String"
+			},
+			{
+				"name": "Gender",
+				"type": "String"
+			},
+			{
+				"name": "Full Name",
+				"type": "String"
+			},
+			{
+				"name": "First Name_11",
+				"type": "String"
+			},
+			{
+				"name": "Last Name_12",
+				"type": "String"
+			},
+			{
+				"name": "Lead Message (Comments)",
+				"type": "String"
+			},
+			{
+				"name": "Full Name_13",
+				"type": "String"
+			},
+			{
+				"name": "Speciality",
+				"type": "String"
+			},
+			{
+				"name": "Client Religion",
+				"type": "String"
+			},
+			{
+				"name": "Date of Birth",
+				"type": "String"
+			},
+			{
+				"name": "Place of Birth",
+				"type": "String"
+			},
+			{
+				"name": "Nationality",
+				"type": "String"
+			},
+			{
+				"name": "Contact Home Address",
+				"type": "String"
+			},
+			{
+				"name": "Work Address",
+				"type": "String"
+			},
+			{
+				"name": "City_15",
+				"type": "String"
+			},
+			{
+				"name": "Specialty: Area of Medicine",
+				"type": "String"
+			},
+			{
+				"name": "Relationship Status",
+				"type": "String"
+			},
+			{
+				"name": "Confirm Email Address",
+				"type": "String"
+			},
+			{
+				"name": "Preferred Date & Time",
+				"type": "String"
+			},
+			{
+				"name": "Confirm Appointment Date",
+				"type": "String"
+			},
+			{
+				"name": "Confirm Email Address_16",
+				"type": "String"
+			},
+			{
+				"name": "Phone",
+				"type": "String"
+			},
+			{
+				"name": "Lead Score",
+				"type": "String"
+			},
+			{
+				"name": "Lastname_Firstname_Email",
+				"type": "String"
+			},
+			{
+				"name": "Lastname_Firstname",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

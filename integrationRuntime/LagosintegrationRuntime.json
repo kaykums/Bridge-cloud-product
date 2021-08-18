@@ -1,0 +1,7 @@
+{
+	"name": "LagosintegrationRuntime",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "New Integration runtime"
+	}
+}

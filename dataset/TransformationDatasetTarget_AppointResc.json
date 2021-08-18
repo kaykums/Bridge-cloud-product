@@ -1,0 +1,700 @@
+{
+	"name": "TransformationDatasetTarget_AppointResc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Transformation",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "m_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "creator_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "created",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "modifier_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "modified",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "deleted",
+				"type": "bit"
+			},
+			{
+				"name": "rowversion",
+				"type": "timestamp"
+			},
+			{
+				"name": "ciid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "patient_nr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "familyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "firstname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "firstnames2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "nameaffix",
+				"type": "nvarchar"
+			},
+			{
+				"name": "birthname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "housename",
+				"type": "nvarchar"
+			},
+			{
+				"name": "default_address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "street_private",
+				"type": "nvarchar"
+			},
+			{
+				"name": "region_private",
+				"type": "nvarchar"
+			},
+			{
+				"name": "zip_private",
+				"type": "nvarchar"
+			},
+			{
+				"name": "town_private",
+				"type": "nvarchar"
+			},
+			{
+				"name": "street_business",
+				"type": "nvarchar"
+			},
+			{
+				"name": "region_business",
+				"type": "nvarchar"
+			},
+			{
+				"name": "zip_business",
+				"type": "nvarchar"
+			},
+			{
+				"name": "town_business",
+				"type": "nvarchar"
+			},
+			{
+				"name": "street_other",
+				"type": "nvarchar"
+			},
+			{
+				"name": "region_other",
+				"type": "nvarchar"
+			},
+			{
+				"name": "zip_other",
+				"type": "nvarchar"
+			},
+			{
+				"name": "town_other",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tel_mobile",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tel_business",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tel_business2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tel_private",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tel_other",
+				"type": "nvarchar"
+			},
+			{
+				"name": "fax_business",
+				"type": "nvarchar"
+			},
+			{
+				"name": "fax_private",
+				"type": "nvarchar"
+			},
+			{
+				"name": "email_business",
+				"type": "nvarchar"
+			},
+			{
+				"name": "email_private",
+				"type": "nvarchar"
+			},
+			{
+				"name": "www_business",
+				"type": "nvarchar"
+			},
+			{
+				"name": "www_private",
+				"type": "nvarchar"
+			},
+			{
+				"name": "jobtitle",
+				"type": "nvarchar"
+			},
+			{
+				"name": "birthdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "assurance_nr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "member_nr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "assurance_category",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "recipe_charge_free",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "recipe_charge_free_to",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "letter_salutation",
+				"type": "nvarchar"
+			},
+			{
+				"name": "letter_greeting",
+				"type": "nvarchar"
+			},
+			{
+				"name": "assurance_extra",
+				"type": "nvarchar"
+			},
+			{
+				"name": "bank_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "bank_account_nr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "bank_nr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "bank_iban",
+				"type": "nvarchar"
+			},
+			{
+				"name": "bank_swift",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ewr_nr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ewr_ass_nr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "extra_assurance_ambulant",
+				"type": "bit"
+			},
+			{
+				"name": "extra_assurance_stationary",
+				"type": "bit"
+			},
+			{
+				"name": "memo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "dwa_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "partner_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "employer_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "assured_by_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "ewr_expiry_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "foreign_import_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "religion",
+				"type": "nvarchar"
+			},
+			{
+				"name": "donor",
+				"type": "bit"
+			},
+			{
+				"name": "donor_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "donor_medical_history_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "account_no_financial_accounting",
+				"type": "nvarchar"
+			},
+			{
+				"name": "country_private_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "country_business_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "country_other_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "birthplace_country_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "nationality_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "patient_no_external",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tax_number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "birthplace_region",
+				"type": "nvarchar"
+			},
+			{
+				"name": "birthplace_zip",
+				"type": "nvarchar"
+			},
+			{
+				"name": "birthplace_town",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ambulance_number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ignore_on_export",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "health_insurance",
+				"type": "nvarchar"
+			},
+			{
+				"name": "health_insurance_branch",
+				"type": "nvarchar"
+			},
+			{
+				"name": "salutation_expression_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "salutation_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "voucher_discount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "voucher_discount_per_position",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "voucher_due_days",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "voucher_assured_address",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "gender_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "correspondence_language_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "insurance_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "family_status_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "voucher_period",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "voucher_currency_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "insured_by_relationship_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "occupation_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "inactive",
+				"type": "bit"
+			},
+			{
+				"name": "linked_patient_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "deleted_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "deleted_user_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "assurance_category_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "turn_off_reminders",
+				"type": "bit"
+			},
+			{
+				"name": "street_invoice",
+				"type": "nvarchar"
+			},
+			{
+				"name": "region_invoice",
+				"type": "nvarchar"
+			},
+			{
+				"name": "zip_invoice",
+				"type": "nvarchar"
+			},
+			{
+				"name": "town_invoice",
+				"type": "nvarchar"
+			},
+			{
+				"name": "country_invoice_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "contact_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "do_not_send_sms",
+				"type": "bit"
+			},
+			{
+				"name": "responsible_person_title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_salutation_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "responsible_person_familyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_firstname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_street",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_region",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_zip",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_town",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_country_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "responsible_person_tel_mobile",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_tel",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_fax",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_gender_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "responsible_person_birthdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "translator_title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_salutation_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "translator_familyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_firstname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_street",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_region",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_zip",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_town",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_country_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "translator_tel_mobile",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_tel",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_fax",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_gender_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "translator_birthdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "is_test",
+				"type": "bit"
+			},
+			{
+				"name": "postposed_title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "responsible_person_postposed_title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "translator_postposed_title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "home_visit",
+				"type": "bit"
+			},
+			{
+				"name": "created_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "modified_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "deleted_computer_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "patient_key_word",
+				"type": "nvarchar"
+			},
+			{
+				"name": "reminder_lock",
+				"type": "bit"
+			},
+			{
+				"name": "reminder_lock_remarks",
+				"type": "nvarchar"
+			},
+			{
+				"name": "reminder_lock_till_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "do_not_send_email",
+				"type": "bit"
+			},
+			{
+				"name": "dunning_lock",
+				"type": "bit"
+			},
+			{
+				"name": "dunning_lock_reason",
+				"type": "nvarchar"
+			},
+			{
+				"name": "guid_changed_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "accounting_authority_export_rejected",
+				"type": "bit"
+			},
+			{
+				"name": "translator_patient_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "responsible_person_patient_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "responsible_person_type_guid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "deactivation_remark",
+				"type": "nvarchar"
+			},
+			{
+				"name": "fertility_location",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dm_appointment_resource"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,413 @@
+{
+	"name": "AzureSql_FS_Contacts",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_CRM",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Contact_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": " id",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Last name",
+				"type": "nvarchar"
+			},
+			{
+				"name": " First name",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Emails",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Job title",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Phone 2",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Phone 1",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Facebook",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Twitter",
+				"type": "nvarchar"
+			},
+			{
+				"name": " LinkedIn",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Medium",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Lead Source (API)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Home Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": " City",
+				"type": "nvarchar"
+			},
+			{
+				"name": " State",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Zipcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Sales owner",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Owner email",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Source",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Pipeline Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Campaign",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Territory",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Created at",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " Last contacted time",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " Tags",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Last activity date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " Last activity type",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " Last contacted mode",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Updated at",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " Created by",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Updated by",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Last assigned at",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " First assigned at",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " First contacted",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Score",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Time zone",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Accounts",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Active sales sequences",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Completed sales sequences",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Web forms",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Last seen",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Recent note",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Open Service Value amount",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Won Service Value amount",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Import label",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Subscription status",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Preferred Clinic",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Relationship Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Birthday",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Service",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Pipeline name",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Update 1",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Update 2",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Nationality",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Work Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Shipping City",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Shipping State",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Shipping Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Optional City",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Optional State",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Optional Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Spouse Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Appointment / For",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Preferred Time",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " How did you hear about TBC?",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Referred By",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Enquiry Information",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Gender (IS)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Client Religion",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Place of Birth",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Speciality",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Middle name",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Phone 1 ext",
+				"type": "nvarchar"
+			},
+			{
+				"name": " ID (IS)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Name (IS)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Score Value (IS)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Tag Ids (IS)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Person Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Title",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Created by (IS)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Owner (IS)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Lead Source Category ",
+				"type": "nvarchar"
+			},
+			{
+				"name": " GDPR Request",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Newsletter Confirmation",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Lead Origin",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Lead Message (Comments)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Specialty: Area of Medicine",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Last Updated (IS)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Preferred Date (IS)",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " Created Date and Time (IS)",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": " Facebook (test)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Website (test)",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Fax",
+				"type": "nvarchar"
+			},
+			{
+				"name": " Lead Source API (Delete)",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "FS_Contacts"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

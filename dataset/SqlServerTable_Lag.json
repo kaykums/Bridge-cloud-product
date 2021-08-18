@@ -1,0 +1,13 @@
+{
+	"name": "SqlServerTable_Lag",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer_LAGOS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

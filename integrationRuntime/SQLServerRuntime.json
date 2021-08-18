@@ -1,0 +1,7 @@
+{
+	"name": "SQLServerRuntime",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "for on-Prem"
+	}
+}

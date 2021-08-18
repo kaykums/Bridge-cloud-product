@@ -1,0 +1,63 @@
+{
+	"name": "GetTablesandTrigerCopy_LAG",
+	"properties": {
+		"activities": [
+			{
+				"name": "LookupTableList",
+				"description": "Retrieve the table list from my database",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "SELECT TABLE_SCHEMA, TABLE_NAME FROM information_schema.TABLES WHERE TABLE_TYPE = 'BASE TABLE' and TABLE_SCHEMA = 'dbo' and TABLE_NAME in (\n'appointment', \n'appointment_special_timeperiod',\n 'appointment_to_reminder',\n'bill',\n'bill_diagnosis',\n'bill_payment',\n'bill_payment_document',\n'bill_position',\n'casenote_entry_recompute',\n'company_to_service',\n'computer_configuration',\n'contact',\n'correspondence',\n'credit_note',\n'credit_note_payment',\n'credit_note_position',\n'cryo_storage_transfer_history',\n'diagnosis_to_patient',\n'dm_appointment_category',\n'dm_appointment_limit',\n'dm_appointment_resource',\n'dm_appointment_setting',\n'dm_appointment_status',\n'dm_bill_state',\n'dm_casenote_category',\n'dm_casenote_category_type',\n'dm_casenote_filter',\n'dm_casenote_filter_casenote_category',\n'dm_communication_type',\n'dm_company',\n'dm_company_accounting_template',\n'dm_company_bank_detail',\n'dm_company_permission',\n'dm_counter',\n'dm_country',\n'dm_cryo_tank',\n'dm_cryo_tank_layout',\n'dm_currency',\n'dm_diagnosis',\n'dm_diagnosis_catalog',\n'dm_doctor_speciality',\n'dm_email_signature',\n'dm_examination_configuration',\n'dm_examination_configuration_calculation',\n'dm_examination_configuration_schema',\n'dm_examination_schema',\n'dm_examination_schema_category',\n'dm_examination_schema_parameter',\n'dm_examination_schema_parameter_value',\n'dm_external_app',\n'dm_family_status',\n'dm_file_to_viewer',\n'dm_fingerprint',\n'dm_gender_firstname',\n'dm_gyn_state_declaration',\n'dm_holiday',\n'dm_insurance',\n'dm_insurance_extra_type',\n'dm_ivf_cycle_type',\n'dm_ivf_dish',\n'dm_ivf_dish_well',\n'dm_ivf_drug',\n'dm_ivf_drug_type',\n'dm_ivf_embryo_cryo_method_template',\n'dm_ivf_embryo_transfer_transfer_action',\n'dm_ivf_embryo_transfer_transfer_set',\n'dm_ivf_embryo_transfer_uterus_location',\n'dm_ivf_oocyte_column',\n'dm_ivf_oocyte_column_calculation',\n'dm_ivf_oocyte_column_value',\n'dm_ivf_oocyte_discard_reason',\n'dm_ivf_oocyte_discard_reason_day',\n'dm_ivf_oocyte_process',\n'dm_ivf_oocyte_quality',\n'dm_ivf_protocol_drug',\n'dm_ivf_register',\n'dm_ivf_spermiogram_v2_color',\n'dm_ivf_spermiogram_v2_evaluation_criteria',\n'dm_ivf_spermiogram_v2_method',\n'dm_ivf_spermiogram_v2_semen_preparation_method',\n'dm_ivf_spermiogram_v2_semen_preparation_process',\n'dm_ivf_spermiogram_v2_smell',\n'dm_ivf_stimulation_drug_slot',\n'dm_ivf_therapy',\n'dm_occupation',\n'dm_patient_category',\n'dm_patient_relationship',\n'dm_patient_searchexpression',\n'dm_patient_searchtemplate',\n'dm_payment_method',\n'dm_performance_management_folder',\n'dm_performance_management_kpi',\n'dm_permission',\n'dm_phone_protocol_type',\n'dm_prescription_signature',\n'dm_printer_setting_template',\n'dm_qm_device_document_category',\n'dm_qm_device_list',\n'dm_qm_device_type',\n'dm_qm_document_category',\n'dm_qm_document_type',\n'dm_qm_error_weight',\n'dm_qm_feedback_type',\n'dm_qm_team_member_type',\n'dm_qm_training_category',\n'dm_qm_training_type',\n'dm_question',\n'dm_rating',\n'dm_rota_task',\n'dm_salutation',\n'dm_scanner',\n'dm_service_category',\n'dm_setting',\n'dm_sms_type',\n'dm_stock',\n'dm_stock_article_type',\n'dm_stock_company_document_type',\n'dm_stock_cost_center',\n'dm_stock_division',\n'dm_stock_location',\n'dm_stock_storage_location',\n'dm_templatedoc',\n'dm_templatedoc_localization',\n'dm_templatedoc_property',\n'dm_templateform',\n'dm_templatelabel',\n'dm_templateqm',\n'dm_templatescan',\n'dm_waitinglist',\n'dm_workbreak',\n'dm_workbreak_rule',\n'dm_workgroup',\n'dm_zip_town',\n'doctor',\n'doctor_insurance',\n'dwa_patient',\n'dynamed_exception_log',\n'dynamed_installation_history',\n'dynamed_instance',\n'dynamed_process',\n'dynamed_setting',\n'dynamed_setting_parameter',\n'dynamed_version',\n'dynamed_version_mismatch',\n'examination',\n'exchange_rate',\n'financial_accounting_export',\n'financial_accounting_export_company',\n'financial_accounting_export_patient',\n'financial_accounting_export_voucher',\n'financial_accounting_export_voucher_position',\n'gyn_fetus',\n'gyn_general_examination',\n'gyn_genital_examination',\n'gyn_hysterometer_examination',\n'gyn_hysteroscopy_examination',\n'gyn_mammogram',\n'gyn_pregnancy_scan',\n'gyn_preventive_examination',\n'gyn_ultrasound',\n'gyn_ultrasound_examination',\n'gyn_ultrasound_measurement',\n'gyn_ultrasound_volume_measurement',\n'holiday_to_schedule',\n'image_examination',\n'ivf_bill_cryo',\n'ivf_culture',\n'ivf_culture_column_value',\n'ivf_culture_day',\n'ivf_culture_day_assesment',\n'ivf_culture_dish',\n'ivf_culture_dish_incubator',\n'ivf_culture_dish_well',\n'ivf_culture_oocyte_quality',\n'ivf_culture_semen',\n'ivf_cycle',\n'ivf_cycle_state_reason',\n'ivf_cycle_type_mapping',\n'ivf_delivery_abort',\n'ivf_delivery_abort_pregnancy_test',\n'ivf_document',\n'ivf_donor_medical_history',\n'ivf_donor_medical_history_allergy',\n'ivf_donor_medical_history_birth_defect',\n'ivf_donor_medical_history_child_health',\n'ivf_donor_medical_history_job',\n'ivf_donor_medical_history_parent',\n'ivf_donor_medical_history_relative',\n'ivf_donor_medical_history_sexual_disease',\n'ivf_donor_medical_history_surgery',\n'ivf_drugs_to_protocol',\n'ivf_egg_collection',\n'ivf_embryo_cryo',\n'ivf_embryo_cryo_straw',\n'ivf_embryo_cryo_straw_embryo',\n'ivf_embryo_transfer',\n'ivf_oocyte',\n'ivf_semen_collection',\n'ivf_semen_collection_histoid',\n'ivf_semen_cryo',\n'ivf_semen_cryo_straw',\n'ivf_spermiogram',\n'ivf_spermiogram_imsi',\n'ivf_spermiogram_v2',\n'ivf_spermiogram_v2_additional_semen_analysis',\n'ivf_spermiogram_v2_adoption',\n'ivf_spermiogram_v2_imsi',\n'ivf_spermiogram_v2_morphology',\n'ivf_spermiogram_v2_semen_analysis',\n'ivf_spermiogram_v2_semen_analysis_after_preparation',\n'ivf_spermiogram_v2_semen_preparation',\n'ivf_spermiogram_v2_tese',\n'ivf_stim',\n'ivf_stim_day',\n'ivf_therapy_result',\n'ivf_therapy_result_abort_bleeding',\n'ivf_therapy_result_birth',\n'ivf_therapy_result_birth_maternal_information',\n'ivf_therapy_result_bleeding',\n'ivf_therapy_result_crown_rump_length',\n'ivf_therapy_result_embryonic_plant',\n'ivf_therapy_result_heart_reaction',\n'ivf_therapy_result_intrauterine_death',\n'ivf_therapy_result_pregnancy_test',\n'ivf_therapy_result_yolk_sac',\n'ivf_therapy_to_cycle',\n'lab_examination',\n'lab_request',\n'lab_request_parameter',\n'lab_result',\n'literature',\n'medicament_to_patient',\n'message',\n'message_attachment',\n'message_recipient',\n'pacs_examination',\n'pacs_examination_file',\n'patient',\n'patient_blood_pressure_measurement',\n'patient_couple',\n'patient_extended_property',\n'patient_insurance_extra_type',\n'patient_share',\n'patient_to_category',\n'patient_to_company',\n'patient_to_doctor_speciality',\n'patient_to_language',\n'patient_value_height',\n'patient_value_weight',\n'phone_protocol',\n'prescription',\n'printer_setting',\n'qm_department',\n'qm_department_user',\n'qm_device',\n'qm_device_document',\n'qm_device_document_to_category',\n'qm_device_instruction',\n'qm_device_lock_log',\n'qm_device_service',\n'qm_document',\n'qm_document_assignment_audit',\n'qm_document_category',\n'qm_document_change_note',\n'qm_document_confirm',\n'qm_document_favorite',\n'qm_document_mandator',\n'qm_document_norm',\n'qm_document_relevant_department',\n'qm_document_statistic',\n'qm_document_steering',\n'qm_document_steering_audit',\n'qm_document_template_favorite',\n'qm_document_translation',\n'qm_document_type',\n'qm_error',\n'qm_error_cause',\n'qm_error_notification',\n'qm_error_recipient',\n'qm_error_scope',\n'qm_error_team_member',\n'qm_feedback',\n'qm_feedback_recipient',\n'qm_feedback_scope',\n'qm_feedback_team_member',\n'qm_fmea',\n'qm_fmea_mandator',\n'qm_measure',\n'qm_measure_scope',\n'qm_measurement',\n'qm_measurement_event',\n'qm_measurement_parameter',\n'qm_measurement_parameter_bound',\n'qm_norm',\n'qm_permission',\n'qm_permission_steering',\n'qm_permission_translation',\n'qm_process_to_document',\n'qm_requirement_management',\n'qm_requirement_management_source',\n'qm_requirement_management_team_member',\n'qm_room',\n'qm_sensor_container_event',\n'qm_sensor_container_to_type',\n'qm_training',\n'qm_training_appointment',\n'qm_training_to_category',\n'qm_training_to_type',\n'qm_training_to_user',\n'qm_tree',\n'qm_tree_translation',\n'sono_avc_to_stimulation',\n'speciality_to_doctor',\n'stock_article',\n'stock_article_document',\n'stock_article_to_cart',\n'stock_article_to_test',\n'stock_batch',\n'stock_batch_release',\n'stock_batch_release_test',\n'stock_cart',\n'stock_company',\n'stock_company_contact',\n'stock_company_document',\n'stock_division_to_article',\n'stock_ivf_charge',\n'stock_location_to_process',\n'stock_order',\n'stock_order_delivery_note',\n'stock_order_pos',\n'stock_order_pos_transfer',\n'stock_storage_location_to_article',\n'stock_test',\n'stock_transfer',\n'stock_type_ivf',\n'telemetry',\n'timerecording',\n'timerecording_balance_correction',\n'timerecording_closure',\n'timerecording_user_to_time_model',\n'waitinglist'\n);",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "SqlServerTable_Abj",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "LookupTableList",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "NewiterateTableLag",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": false,
+					"parameters": {
+						"tableList": {
+							"value": "@activity('LookupTableList').output.value",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-02-15T15:58:45Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

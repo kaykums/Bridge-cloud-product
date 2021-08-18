@@ -1,0 +1,336 @@
+{
+	"name": "FSBlob_FSContactsDB",
+	"properties": {
+		"activities": [
+			{
+				"name": "FSBlob_FSContacts",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "ExcelSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "Truncate table [dbo].[FS_Contacts]",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Contact : id",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " id",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Last name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Last name",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : First name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " First name",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Emails",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Emails",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Job title",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Job title",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Phone 2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Phone 2",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Phone 1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Phone 1",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Lead Source (API)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Lead Source (API)",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Sales owner",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Sales owner",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Owner email",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Owner email",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Source",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Source",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Pipeline Status",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Pipeline Status",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Campaign",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Campaign",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Territory",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Territory",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Created at",
+									"type": "DateTime",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Created at",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Last contacted mode",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Last contacted mode",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Created by",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Created by",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Birthday",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Birthday",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Service",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Service",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Pipeline name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Pipeline name",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Spouse Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Spouse Name",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Lead Source Category ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Lead Source Category ",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact : Lead Source API (Delete)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": " Lead Source API (Delete)",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ExcelDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSql_FS_Contacts",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-02-19T12:35:12Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

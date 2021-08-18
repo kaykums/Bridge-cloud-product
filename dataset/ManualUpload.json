@@ -1,0 +1,132 @@
+{
+	"name": "ManualUpload",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ManualDynamedExcel",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet5",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "All_Manual Upload_30_09.xlsx",
+				"container": "dynamedmanualupload"
+			},
+			"range": "A1:AC345137",
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "From",
+				"type": "String"
+			},
+			{
+				"name": "Until",
+				"type": "String"
+			},
+			{
+				"name": "Schedule List",
+				"type": "String"
+			},
+			{
+				"name": "Subject",
+				"type": "String"
+			},
+			{
+				"name": "Patient Number",
+				"type": "String"
+			},
+			{
+				"name": "Patient",
+				"type": "String"
+			},
+			{
+				"name": "Category",
+				"type": "String"
+			},
+			{
+				"name": "Process",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Room",
+				"type": "String"
+			},
+			{
+				"name": "Type",
+				"type": "String"
+			},
+			{
+				"name": "With Reservations",
+				"type": "String"
+			},
+			{
+				"name": "Comment(s)",
+				"type": "String"
+			},
+			{
+				"name": "E-Mail",
+				"type": "String"
+			},
+			{
+				"name": "Phone",
+				"type": "String"
+			},
+			{
+				"name": "Date of Birth",
+				"type": "String"
+			},
+			{
+				"name": "Street",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			},
+			{
+				"name": "ZIP",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "Created by",
+				"type": "String"
+			},
+			{
+				"name": "Created on",
+				"type": "String"
+			},
+			{
+				"name": "Modified by",
+				"type": "String"
+			},
+			{
+				"name": "Modified on",
+				"type": "String"
+			},
+			{
+				"name": "Location_1",
+				"type": "String"
+			},
+			{
+				"name": "To",
+				"type": "String"
+			},
+			{
+				"name": "Resource",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

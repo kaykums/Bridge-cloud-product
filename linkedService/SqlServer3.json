@@ -1,0 +1,17 @@
+{
+	"name": "SqlServer3",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "PH Alone",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=172.25.2.15;initial catalog=dynamed;user id=kayodek",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmNWMxY2MzMC1kZmViLTRmNzMtYTA1ZC1iNTZiMmQ0YzRiNTgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "PhIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

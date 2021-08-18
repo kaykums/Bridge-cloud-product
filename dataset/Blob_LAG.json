@@ -1,0 +1,22 @@
+{
+	"name": "Blob_LAG",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_LAG",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "bdcfolder"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

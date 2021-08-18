@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntimeLag",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

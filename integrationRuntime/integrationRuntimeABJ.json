@@ -1,0 +1,7 @@
+{
+	"name": "integrationRuntimeABJ",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "For Abuja Alone"
+	}
+}

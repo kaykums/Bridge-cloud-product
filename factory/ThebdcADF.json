@@ -1,0 +1,9 @@
+{
+	"name": "ThebdcADF",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d16b20ab-f6f1-49ed-a46e-fd88895363fe",
+		"tenantId": "89b10d3e-1e42-4978-8de4-cac25294a80a"
+	}
+}

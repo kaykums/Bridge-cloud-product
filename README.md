@@ -1,1 +1,2 @@
 # Bridge-cloud-product
+The Data Alignment project was commissioned to ensure that all sources of data relating to leads and client demographics, conversions, and specific services rendered are identified, unified, and traceable from the beginning to the end of every fertility treatment cycle. It aims at creating flexible and sustainable reporting and high availability of real-time data for informed decision making.

@@ -94,7 +94,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "appointment"
+			"table": "dm_appointment_resource"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

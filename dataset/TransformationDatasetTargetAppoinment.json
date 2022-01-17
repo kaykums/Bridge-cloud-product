@@ -693,7 +693,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "dm_appointment_category"
+			"table": "appointment"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
